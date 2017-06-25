@@ -1,32 +1,21 @@
-import os
-from os import walk
-from PIL import Image
-from os import walk
-from imagen import imagen
-
-
-
 class Biblioteca:
     Etiquetas = {
-    "oceano":[2,3,4,5],
-    "playa":[1]
+    "oso":[2,3,4,5],
+    "gato":[1]
     }
     ListaImagenes = [];
 
     def __init__(self,diretorio):
-        ## "perrito.jpg","/misimagenes",""
-        ## leerdirectorio
     def showId(self,Id):
         return ListaImagenes.index(Id)
 
     def leerdirectorio(self,directorio):
-        ##Leer todas las imagenes del directorio
          ListaImagenes.append(imagen(ruta,nombre,""))
     def etiquetar():
-        #Mostrar imagenes en
+
 
     def clasificar():
-        ruta_deimagenes = os.getcwd()  # obtiene ruta del crpeta
+        ruta_deimagenes = os.getcwd()
         contenido = os.listdir(ruta_deimagenes)
         print (contenido)
         for (ruta,carpeta,imagen) in os.walk(ruta_deimagenes):

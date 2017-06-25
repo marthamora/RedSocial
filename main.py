@@ -1,9 +1,12 @@
-
+import os
+from os import walk
+from PIL import Image
+from os import walk
 from biblioteca import biblioteca
+ruta_deimagenes = os.getcwd()
 
-## Dame el directorio donde buscar imagenes
 
-directorio= "~/MisImagenes"
+directorio= " os.walk(ruta_deimagenes):"
 
 Bibloteca = biblioteca(directorio)
 
@@ -16,15 +19,3 @@ print(Numerodeosos)
 Biblioteca.show([1,3,5]);
 
 Biblioteca.showImagenes(1,40)
-
-
-
-
-#for (ruta, carpeta, imagen) in walk('ruta_deimagenes'):
-   # print ruta
-    #print carpeta
-    #print imagen
-
- ##  Lista_carpeta = [carpeta]
-    #Lista_imagen = [imagen]
-   # print Lista_imagen
