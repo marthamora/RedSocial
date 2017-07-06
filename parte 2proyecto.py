@@ -1,35 +1,115 @@
-from Tkinter import*
+import biblioteca as LB
+from Tkinter import *
 import tkMessageBox
+import Image, ImageTk, os
 
-    c1=photo1.get()
-    c2=photo1.get()
-    c3=photo1.get()
-    c4=photo1.get()
-    c5=photo1.get()
-    photos= c1+c2+c3+c4+c5
-    photosB = photosA
-    photosA += photos
-    ventana=Tk()
-    ventana.geometry("750x700+0+0")
-    ventana.title("imagenes por categorias")
-    photosA=18
-    allimages=PhotoImage(file="allimages.gif")
-    perro1=PhotoImage(file="perro.jpg")
-    perro2=PhotoImage(file="perro2.jpg")
-    perro3=PhotoImage(file="perro3.jpg")
-    gato1=PhotoImage(file="gato.jpg")
-    leon=PhotoImage(file="lion.jpg")
-    tigre=PhotoImage(file="tigre.jpg")
-    conejo=PhotoImage(file="conejo.jpg")
+def funcion(Imagen):
+    self.etiqueta=a
+    v0 = Tk()
+    v0.geometry("1400x700")
+    v0.title("Imagenes de animales")
+    v0.config(bg="black")
+    v1=Toplevel(v0)
+
+    def mostrar(ventana): ventana.deiconify()
+    def ocultar(ventana):ventana.withdraw()
+    def ejecutar(f): v0.after(200,f)
+
+    b1=Button(v0,text="VER MAS",command=lambda: ejecutar(mostrar(v1)))
+    b1.grid(row=1,column=1)
+    b2=Button(v1,text="VER MENOS",command=lambda: ejecutar(ocultar(v1)))
+    b2.grid(row=1,column=1)
+
+     for i,j=0 in imagenes:
+         imagen = PhotoImage(file=LB.Imagen.a(i))
+         label8 = Button(v1, image=imagen)
+         label8.grid(row=j,colum=i)
+         if i % 4 = 0:
+             j += 1
 
 
-lblp1=Label(ventana,text="escribe una categoria").grid(row=0,column=5)
+    v1.withdraw()
+    v0.mainloop()
 
-                boton1 = Checkbutton(ventana,image=allimages[vector2[photosA]],bg='red',variable=photo1,onvalue=1,offvalue=0).grid(row=0,column=0)
-                            boton2 = Checkbutton(ventana,image=allimages[vector2[photosA]],bg='red',variable=,onvalue=1,offvalue=0).grid(row=0,column=1)
 
-    else:
-        lblp1=Label(ventana,text="estas imagenes son de la categoria DOMESTICOS").grid(row=0,column=5)
-                photosA tkMessageBox.showinfo(title="SON DE LA CATEGORIA FELINOS",message="SON MUCHOS FELINOS")
-    if>=18
-        tkMessageBox.showinfo(title="SON TODAS LAS IMAGENES EN EL DIRECTORIO",message="SE ACABARON")
+def funcion2(Imagen):
+    self.etiqueta=a
+    v0 = Tk()
+    v0.geometry("1400x700")
+    v0.title("Imagenes de perros")
+    v1=Toplevel(v0)
+
+    def mostrar(ventana): ventana.deiconify()
+    def ocultar(ventana):ventana.withdraw()
+    def ejecutar(f): v0.after(200,f)
+
+    v0.config(bg="black")
+    v0.geometry("500x500")
+
+    b1=Button(v0,text="VER MAS",command=lambda: ejecutar(mostrar(v1)))
+    b1.grid(row=1,column=1)
+    b2=Button(v1,text="VER MENOS",command=lambda: ejecutar(ocultar(v1)))
+    b2.grid(row=1,column=1)
+
+     for i,j=0 in imagenes:
+         imagen = PhotoImage(file=LB.imagen.a(i))
+         label8 = Button(v1, image=imagen)
+         label8.grid(row=j,colum=i)
+         if i % 4 = 0:
+             j += 1
+
+    v1.withdraw()
+    v0.mainloop()
+
+
+def funcion3(Imagen):
+    self.etiqueta=a
+    v0 = Tk()
+    v0.geometry("1400x700")
+    v0.title("Imagenes de osos")
+    v1=Toplevel(v0)
+
+    def mostrar(ventana): ventana.deiconify()
+    def ocultar(ventana):ventana.withdraw()
+    def ejecutar(f): v0.after(200,f)
+
+    v0.config(bg="black")
+    v0.geometry("500x500")
+
+    b1=Button(v0,text="VER MAS",command=lambda: ejecutar(mostrar(v1)))
+    b1.grid(row=1,column=1)
+    b2=Button(v1,text="VER MENOS",command=lambda: ejecutar(ocultar(v1)))
+    b2.grid(row=1,column=1)
+
+    for i,j=0 in imagenes:
+        imagen = PhotoImage(file=LB.Imagen.a(i))
+        label8 = Button(v1, image=imagen)
+        label8.grid(row=j,colum=i)
+        if i % 4 = 0:
+            j += 1
+
+
+    v1.withdraw()
+    v0.mainloop()
+
+
+ventana=Tk()
+ventana.geometry("400x130")
+ventana.title('Imagenes')
+label1=Label(ventana,text="Buscar en imagenes : ")
+label1.grid(row=1,column=1)
+variable_string = StringVar()
+
+boton1 = Button(ventana,text="Perros", command=lambda v=ventana, s = variable_string:funcion(s))
+boton1.grid(row=8,column=9)
+
+boton2 = Button(ventana,text="osos", command=lambda v=ventana, s = variable_string:funcion2(s))
+boton2.grid(row=9,column=10)
+
+boton3 = Button(ventana,text="gatos", command=lambda v=ventana, s = variable_string:funcion3(s))
+boton3.grid(row=10,column=11)
+
+ventana.mainloop()
+tkMessageBox.showinfo(title="SON TODAS LAS IMAGENES EN EL DIRECTORIO",message="SE ACABARON")
+
+   
