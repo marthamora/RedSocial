@@ -1,7 +1,10 @@
 class Biblioteca:
     Etiquetas = {
-    "oso":[2,3,4,5],
-    "gato":[1]
+        c-  lista.append(raw_input("ingresar etiquetas: "))
+                           
+    "oso":[],
+    "gato":[}
+     "perro":[]
     }
     ListaImagenes = [];
 
@@ -27,7 +30,9 @@ class Biblioteca:
                        mi_imagen= Image.open(ruta_deimagenes+'/'+ i)
                        mi_imagen.show()
                        for i in range(0,5):
+            
                            lista.append(raw_input("ingresar etiquetas: "))
+                           
 
     def showImagenes(self,inicio,final):
         for i in range(inicio,final):
